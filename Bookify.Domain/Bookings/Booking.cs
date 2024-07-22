@@ -82,7 +82,7 @@ namespace Bookify.Domain.Bookings
         {
             if (Status != BookingStatus.Reserved)
             {
-                return Result.Failure(BookingErrors.NotPending);
+                return Result.Failure(BookingErrors.NotReserved);
             }
 
             Status = BookingStatus.Confirmed;
@@ -90,14 +90,14 @@ namespace Bookify.Domain.Bookings
 
             RaiseDomainEvent(new BookingConfirmedDomainEvent(Id));
 
-            return Result.Success;
+            return Result.Success();
         }
 
         public Result Reject(DateTime utcNow)
         {
             if (Status != BookingStatus.Reserved)
             {
-                return Result.Failure(BookingErrors.NotPending);
+                return Result.Failure(BookingErrors.NotReserved);
             }
 
             Status = BookingStatus.Rejected;
@@ -105,7 +105,7 @@ namespace Bookify.Domain.Bookings
 
             RaiseDomainEvent(new BookingRejectedDomainEvent(Id));
 
-            return Result.Success;
+            return Result.Success();
         }
 
         public Result Complete(DateTime utcNow)
@@ -120,7 +120,7 @@ namespace Bookify.Domain.Bookings
 
             RaiseDomainEvent(new BookingCompletedDomainEvent(Id));
 
-            return Result.Success;
+            return Result.Success();
         }
 
         public Result Cancel(DateTime utcNow)
@@ -142,7 +142,7 @@ namespace Bookify.Domain.Bookings
 
             RaiseDomainEvent(new BookingCancelledDomainEvent(Id));
 
-            return Result.Success;
+            return Result.Success();
         }
     }
 }
