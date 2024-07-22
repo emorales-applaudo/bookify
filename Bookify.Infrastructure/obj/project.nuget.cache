@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "ps7d5woRhE4=",
+  "dgSpecHash": "LfBYgIdXxQk=",
   "success": true,
   "projectFilePath": "C:\\Users\\Edwin\\source\\repos\\Bookify\\Bookify.Infrastructure\\Bookify.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Edwin\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\mediatr\\12.3.0\\mediatr.12.3.0.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.1\\microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\Edwin\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
