@@ -9,5 +9,5 @@ namespace Bookify.Application.Apartments.SearchApartments
 {
     public sealed record SearchApartmentsQuery(
         DateOnly StartDate,
-        DateOnly EndDate) : IQuery<List<ApartmentResponse>>;
+        DateOnly EndDate) : IQuery<IReadOnlyList<ApartmentResponse>>;
 }
