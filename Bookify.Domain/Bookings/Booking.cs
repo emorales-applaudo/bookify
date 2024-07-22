@@ -1,5 +1,6 @@
 ﻿using Bookify.Domain.Abstractions;
-using Bookify.Domain.Apartments;
+using Bookify.Domain.Bookings.Events;
+using Bookify.Domain.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,13 +53,24 @@ namespace Bookify.Domain.Bookings
             Guid apartmentId,
             Guid userId,
             DateRange duration,
-            DateTime utcNow)
+            DateTime utcNow,
+            PricingDetails pricingDetails)
         {
             var booking = new Booking(
-                Guid.NewGuid,
+                Guid.NewGuid(),
                 apartmentId,
                 userId,
-                duration);
+                duration,
+                pricingDetails.PriceForPeriod,
+                pricingDetails.CleaningFee,
+                pricingDetails.AmenitiesUpCharge,
+                pricingDetails.TotalPrice,
+                BookingStatus.Reserved,
+                utcNow);
+
+            booking.RaiseDomainEvent(new BookingReservedDomainEvent(booking.Id));
+
+            return booking;
         }
     }
 }
