@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bookify.Domain.Bookings
 {
-    public sealed class PricingService
+    public class PricingService
     {
         public PricingDetails CalculatePrice(Apartment apartment, DateRange period)
         {
@@ -37,7 +37,7 @@ namespace Bookify.Domain.Bookings
                     currency);
             }
 
-            var totalPrice = Money.Zero();
+            var totalPrice = Money.Zero(currency);
             totalPrice += priceForPeriod;
 
             if (!apartment.CleaningFee.IsZero())
