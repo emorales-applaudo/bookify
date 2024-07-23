@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "64EGHekLkA4=",
+  "dgSpecHash": "XkjpCuPhgiE=",
   "success": true,
   "projectFilePath": "C:\\Users\\Edwin\\source\\repos\\Bookify\\Bookify.Api\\Bookify.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Edwin\\.nuget\\packages\\bogus\\35.6.0\\bogus.35.6.0.nupkg.sha512",
     "C:\\Users\\Edwin\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\Edwin\\.nuget\\packages\\efcore.namingconventions\\8.0.3\\efcore.namingconventions.8.0.3.nupkg.sha512",
     "C:\\Users\\Edwin\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
