@@ -28,11 +28,18 @@ namespace Bookify.Infrastructure
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            var result = await base.SaveChangesAsync(cancellationToken);
+            try
+            {
+                var result = await base.SaveChangesAsync(cancellationToken);
 
-            await PublishDomainEventAsync();
+                await PublishDomainEventAsync();
 
-            return result;
+                return result;
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                throw new DbUpdateConcurrencyException("Concurrency exception occurred.", ex);
+            }
         }
 
         private async Task PublishDomainEventAsync()
