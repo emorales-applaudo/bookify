@@ -1,0 +1,61 @@
+name: dockercompose7410037094406154378
+services:
+  bookify-db:
+    container_name: Bookify.Db
+    environment:
+      POSTGRES_DB: bookify
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Edwin\source\repos\Bookify\.containers\database
+        target: /var/lib/postgresql/data
+        bind:
+          create_host_path: true
+  bookify.api:
+    build:
+      context: C:\Users\Edwin\source\repos\Bookify
+      dockerfile: Bookify.Api/Dockerfile
+    container_name: Bookigy.Api
+    depends_on:
+      bookify-db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: bookifyapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        published: "5001"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Edwin\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Edwin\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose7410037094406154378_default
