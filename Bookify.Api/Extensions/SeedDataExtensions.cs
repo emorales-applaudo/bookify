@@ -39,7 +39,7 @@ namespace Bookify.Api.Extensions
             }
 
             const string sql = """
-                INSET INTO public.apartments
+                INSERT INTO public.apartments
                 (id, "name, description, address_country, address_state, address_zip_code, address_city, address_street, price_amount, price_currency, cleaning_fee_amount, cleaning_fee_currency, amenities, last_booked_on)
                 VALUES(@Id, @Name, @Description, @Country, @State, @ZipCode, @City, @Street, @PriceAmount, @PriceCurrency, @CleaningFeeAmount, @CleaningFeeCurrency, @Amenities, @LastBookedOn)
                 """;
