@@ -43,6 +43,6 @@ namespace Bookify.Infrastructure.Authentication.Models
                 CreateTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
                 Attributes = new Dictionary<string, List<string>>(),
                 RequiredActions = Array.Empty<string>(),
-            }
+            };
     }
 }
