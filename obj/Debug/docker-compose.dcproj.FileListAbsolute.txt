@@ -33,3 +33,11 @@ C:\Users\Edwin\source\repos\Bookify\obj\Debug\docker-compose.dcproj.CoreCompileI
 C:\Users\Edwin\source\repos\Bookify\obj\Debug\docker-c.35A3FFBA.Up2Date
 C:\Users\Edwin\source\repos\Bookify\bin\Debug\System.Text.Json.dll
 C:\Users\Edwin\source\repos\Bookify\bin\Debug\Bogus.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Edwin\source\repos\Bookify\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
