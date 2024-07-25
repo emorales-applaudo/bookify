@@ -41,7 +41,7 @@ namespace Bookify.Infrastructure.Authentication
         {
             var authorizationRequestParameters = new KeyValuePair<string, string>[]
             {
-                new("client_id", _keycloakOptions.AuthClientId),
+                new("client_id", _keycloakOptions.AdminClientSecret),
                 new("client_secret", _keycloakOptions.AdminClientSecret),
                 new("scope", "openid email"),
                 new("grant_type", "client_credentials"),
