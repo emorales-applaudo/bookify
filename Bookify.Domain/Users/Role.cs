@@ -20,5 +20,7 @@ namespace Bookify.Domain.Users
         public string Name { get; set; } = string.Empty;
 
         public ICollection<User> Users { get; set; } = new List<User>();
+
+        public ICollection<Permission> Permissions { get; init; } = new List<Permission>();
     }
 }
